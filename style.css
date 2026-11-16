@@ -1,0 +1,23 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 32px 14px; font-family: system-ui, Arial, sans-serif; background: #f2f4f8; color: #202a3b; }
+.game { max-width: 600px; margin: auto; background: white; padding: 28px; border-radius: 18px; box-shadow: 0 7px 28px #152d4b18; text-align: center; }
+h1 { margin: 0 0 8px; }
+p { line-height: 1.5; }
+button { background: #2355b7; border: 0; border-radius: 8px; color: white; padding: 12px 16px; font: inherit; cursor: pointer; }
+button:hover:not(:disabled) { background: #183e89; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+.hangman { height: 250px; max-width: 100%; margin: 10px auto; }
+.hangman .gallows, .hangman [data-part] { fill: none; stroke: #29384d; stroke-width: 5; stroke-linecap: round; }
+.hangman [data-part] { visibility: hidden; }
+.hangman [data-part].visible { visibility: visible; }
+.word { font-size: clamp(24px, 5vw, 36px); letter-spacing: 9px; min-height: 55px; font-weight: 700; overflow-wrap: anywhere; }
+#guess-form { margin: 12px auto 20px; }
+#guess-form label { display: block; margin-bottom: 8px; font-weight: 600; }
+.guess-row { display: flex; justify-content: center; gap: 8px; }
+input { max-width: 110px; min-width: 0; font: inherit; padding: 10px; text-align: center; text-transform: uppercase; border: 1px solid #9aabc3; border-radius: 8px; }
+.guesses { background: #eff4fb; padding: 14px 20px; border-radius: 12px; text-align: left; }
+.guesses h2 { margin: 0 0 6px; font-size: 19px; }
+.guesses p { margin: 7px 0; }
+dialog { border: none; border-radius: 16px; padding: 28px; max-width: min(90vw, 400px); box-shadow: 0 12px 40px #0004; text-align: center; }
+dialog::backdrop { background: #0009; }
+#dialog-close { background: #64748b; }
